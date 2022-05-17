@@ -52,13 +52,11 @@ public class DownloadImportRandomUserWorkerStepConfig {
   }
 
   @Bean
-  @StepScope
   public RandomUserToUserProcessor randomUserToUserProcessor() {
     return new RandomUserToUserProcessor();
   }
 
   @Bean
-  @StepScope
   public RepositoryItemWriter<? super User> userRepositoryWriter() {
     return new RepositoryItemWriterBuilder<User>().repository(userRepository).build();
   }
